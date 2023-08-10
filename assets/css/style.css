@@ -1,0 +1,225 @@
+ /*!---CSS-RESET---!*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    font: 30px/37px 'Montserrat' , sans-serif;
+    font-weight: 600;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /*!---CSS-RESET---!*/
+
+
+
+
+body{
+  background: url(../img/Adsız.png);
+  background-repeat: no-repeat;
+}
+
+header h1{
+    color: #7e7777;
+    margin: 80px 0;
+    font-size:50px;
+}
+
+header,
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    position: relative;
+}
+
+form .search{
+    display: flex;
+}
+
+form button,
+form input{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: #fff;
+    outline: none;
+}
+
+form button{
+    color: #fff;
+    background-color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color: #fff;
+    color: #340436;
+}
+
+.select{
+    position: relative;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    width: 10rem;
+    padding: 1rem;
+    cursor: pointer;
+    color: #340436;
+}
+
+.select:after{
+    content: "\25BC";
+    position: absolute;
+    background-color: #340436;
+    color: #fff;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.select:hover:after{
+    background-color: #fff;
+    color: #340436;
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s all ease;
+}
+
+.todo li{
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+.complete-btn,
+.trash-btn{
+    background-color: #960303;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background-color: #0b8793;
+}
+
+
+.fa-check-circle,
+.fa-minus-circle{
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+/*! alert css */
+.alert-wrapper{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+}
+
+.alert-success,
+.alert-warning{
+    padding: 1rem;
+    color: #fff;
+    font-weight: bold;
+    width: 25rem;
+    text-align: center;
+    display: none;
+}
+
+.alert-warning{
+    background-color: #dc3545;
+}
+
+.alert-success{
+    background-color: #000000;
+}
+
+
+.fall{
+    transform: translateY(8rem) rotateZ(360deg);
+    opacity: 0;
+}
+
+.completed{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
